@@ -2,11 +2,8 @@ import React from "react";
 import "./todoList.css";
 
 class TodoLists extends React.Component {
-  check(item, e) {
-    console.log(e.target.checked);
-    this.props.checked(item, e.target.checked);
-  }
   render() {
+    const { checked } = this.props
     return (
       <ol>
         {this.props.todolist.map((item) => {
@@ -16,7 +13,7 @@ class TodoLists extends React.Component {
               <input
                 type="checkbox"
                 defaultChecked={item.status}
-                onClick={this.check.bind(this, item)}
+                onClick={checked.bind(this,item)}
               />
             </li>
           );
