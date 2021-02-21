@@ -3,6 +3,7 @@ import TodoLists from "./todoList.js";
 import AddTodo from "./addTodo.js";
 import Count from "./count.js";
 import "./index.css";
+import {Link} from 'react-router-dom';
 
 class TodoList extends React.Component {
   constructor(props) {
@@ -44,6 +45,7 @@ class TodoList extends React.Component {
           checked={this.checked.bind(this)}
         />
         <Count value={this.state.todoList} />
+        <Link to="/article">前往文章页面</Link>
       </div>
     );
   }
