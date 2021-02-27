@@ -11,3 +11,10 @@ export const changeStatus = (item) => {
         item
     }
 }
+
+export const sagaTest = (saga="控制台打印的saga来自saga") => (
+    {
+        type: 'sagaTest',
+        saga
+    }
+)
